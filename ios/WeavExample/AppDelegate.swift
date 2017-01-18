@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     WeavKit.setup()
     
+    
+    // It is upto the host app to enable and disable subscription status on Weav Kit based on user's ability to access premium content
+    WeavKit.setHasSubscription(true)
+    
     return true
   }
 

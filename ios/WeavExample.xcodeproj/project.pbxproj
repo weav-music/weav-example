@@ -15,6 +15,7 @@
 		3C6A177C1DF708D3006CD716 /* WeavKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6A17771DF708C3006CD716 /* WeavKit.framework */; };
 		3C6A177D1DF708D3006CD716 /* WeavKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6A17771DF708C3006CD716 /* WeavKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C6A17811DF71180006CD716 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A17801DF71180006CD716 /* PlayerViewController.swift */; };
+		3CA859DE1E2FF11B00B870C8 /* WeavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA859DD1E2FF11B00B870C8 /* WeavViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		3C6A17711DF7087C006CD716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C6A17771DF708C3006CD716 /* WeavKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WeavKit.framework; sourceTree = SOURCE_ROOT; };
 		3C6A17801DF71180006CD716 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		3CA859DD1E2FF11B00B870C8 /* WeavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeavViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				3C6A176E1DF7087C006CD716 /* LaunchScreen.storyboard */,
 				3C6A17711DF7087C006CD716 /* Info.plist */,
 				3C6A17801DF71180006CD716 /* PlayerViewController.swift */,
+				3CA859DD1E2FF11B00B870C8 /* WeavViewController.swift */,
 			);
 			path = WeavExample;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C6A17681DF7087C006CD716 /* RunSetupViewController.swift in Sources */,
+				3CA859DE1E2FF11B00B870C8 /* WeavViewController.swift in Sources */,
 				3C6A17641DF7087C006CD716 /* AppDelegate.swift in Sources */,
 				3C6A17811DF71180006CD716 /* PlayerViewController.swift in Sources */,
 			);

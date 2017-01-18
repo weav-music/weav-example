@@ -63,7 +63,7 @@ extension PlayerViewController: WeavRunningSessionDelegate {
   }
   
   func workoutStateChanged(_ isRunning: Bool) {
-    session.currentVolume = isRunning ? 1.0 : 0.3 // its nice to reduce the volume when workout is paused
+    session.duckAudio(isRunning ? 1.0 : 0.2) // its nice to reduce the volume when workout is paused
     pauseButton.isHidden = !isRunning
     playButton.isHidden = isRunning
   }
