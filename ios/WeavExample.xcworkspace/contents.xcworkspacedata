@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../weav-ios/ios/WeavKit/WeavKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../weav-ios/ios/Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:WeavExample.xcodeproj">
    </FileRef>
    <FileRef

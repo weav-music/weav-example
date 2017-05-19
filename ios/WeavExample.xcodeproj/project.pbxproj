@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C035FB11ECF8E220093EDC3 /* WeavKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C035FB01ECF8E220093EDC3 /* WeavKit.framework */; };
+		3C035FB21ECF8E220093EDC3 /* WeavKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C035FB01ECF8E220093EDC3 /* WeavKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C6A17641DF7087C006CD716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A17631DF7087C006CD716 /* AppDelegate.swift */; };
 		3C6A17681DF7087C006CD716 /* RunSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A17671DF7087C006CD716 /* RunSetupViewController.swift */; };
 		3C6A176B1DF7087C006CD716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6A17691DF7087C006CD716 /* Main.storyboard */; };
 		3C6A176D1DF7087C006CD716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C6A176C1DF7087C006CD716 /* Assets.xcassets */; };
 		3C6A17701DF7087C006CD716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6A176E1DF7087C006CD716 /* LaunchScreen.storyboard */; };
-		3C6A177C1DF708D3006CD716 /* WeavKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6A17771DF708C3006CD716 /* WeavKit.framework */; };
-		3C6A177D1DF708D3006CD716 /* WeavKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6A17771DF708C3006CD716 /* WeavKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C6A17811DF71180006CD716 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A17801DF71180006CD716 /* PlayerViewController.swift */; };
 		3CA859DE1E2FF11B00B870C8 /* WeavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA859DD1E2FF11B00B870C8 /* WeavViewController.swift */; };
 		C51C278B4A76DD931D466239 /* Pods_WeavExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4724FEDDC965EB3F0815442 /* Pods_WeavExample.framework */; };
@@ -26,7 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3C6A177D1DF708D3006CD716 /* WeavKit.framework in Embed Frameworks */,
+				3C035FB21ECF8E220093EDC3 /* WeavKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C035FB01ECF8E220093EDC3 /* WeavKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WeavKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6A17601DF7087C006CD716 /* WeavExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeavExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6A17631DF7087C006CD716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C6A17671DF7087C006CD716 /* RunSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunSetupViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		3C6A176C1DF7087C006CD716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C6A176F1DF7087C006CD716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C6A17711DF7087C006CD716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C6A17771DF708C3006CD716 /* WeavKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WeavKit.framework; sourceTree = SOURCE_ROOT; };
 		3C6A17801DF71180006CD716 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		3CA859DD1E2FF11B00B870C8 /* WeavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeavViewController.swift; sourceTree = "<group>"; };
 		6463E1205534AE31C1C9851D /* Pods-WeavExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeavExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeavExample/Pods-WeavExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C6A177C1DF708D3006CD716 /* WeavKit.framework in Frameworks */,
+				3C035FB11ECF8E220093EDC3 /* WeavKit.framework in Frameworks */,
 				C51C278B4A76DD931D466239 /* Pods_WeavExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +73,7 @@
 		3C6A17571DF7087C006CD716 = {
 			isa = PBXGroup;
 			children = (
+				3C035FB01ECF8E220093EDC3 /* WeavKit.framework */,
 				3C6A17621DF7087C006CD716 /* WeavExample */,
 				3C6A17611DF7087C006CD716 /* Products */,
 				6A91C651A2995043CFD7DED5 /* Pods */,
@@ -91,7 +92,6 @@
 		3C6A17621DF7087C006CD716 /* WeavExample */ = {
 			isa = PBXGroup;
 			children = (
-				3C6A17771DF708C3006CD716 /* WeavKit.framework */,
 				3C6A17631DF7087C006CD716 /* AppDelegate.swift */,
 				3C6A17671DF7087C006CD716 /* RunSetupViewController.swift */,
 				3C6A17691DF7087C006CD716 /* Main.storyboard */,
