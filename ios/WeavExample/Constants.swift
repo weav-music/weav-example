@@ -22,4 +22,6 @@ struct Constants {
     let url = Bundle.main.url(forResource: identifier, withExtension: "bundle")!
     return (identifier: identifier, path: url.path)
   }()
+
+  static let examplePlaylistId = "io.weav.bundle.WeavExample"
 }

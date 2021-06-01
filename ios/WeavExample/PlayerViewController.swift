@@ -26,12 +26,14 @@ class PlayerViewController:UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
+    session.setPlaylistWithId(Constants.examplePlaylistId)
     session.addMusicSessionDelegate(self)
     session.addRunningSessionDelegate(self)
     
     runningControls = session.startCadenceMode(withInitialCadence: 120,
                                                cadenceLock: false)
+
     pauseButton.isHidden = true
   }
   
@@ -44,7 +46,7 @@ class PlayerViewController:UIViewController {
   }
   
   @IBAction func onPlayPauseToggle(_ sender: Any) {
-    if (session.isWorkoutInProgress){
+    if session.isWorkoutInProgress {
       session.pauseWorkout()
       session.pauseMusic()
     } else {
