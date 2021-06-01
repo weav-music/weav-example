@@ -3,19 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C035FB11ECF8E220093EDC3 /* WeavKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C035FB01ECF8E220093EDC3 /* WeavKit.framework */; };
-		3C035FB21ECF8E220093EDC3 /* WeavKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C035FB01ECF8E220093EDC3 /* WeavKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C2525C7266675C300136372 /* kelly_roberts_400m_repeats.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C2525C3266675C300136372 /* kelly_roberts_400m_repeats.bundle */; };
+		3C2525C8266675C300136372 /* kelly_roberts_400m_repeats.enc in Resources */ = {isa = PBXBuildFile; fileRef = 3C2525C4266675C300136372 /* kelly_roberts_400m_repeats.enc */; };
+		3C2525CA266675C300136372 /* kelly_roberts_instructor_embedded.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C2525C6266675C300136372 /* kelly_roberts_instructor_embedded.bundle */; };
+		3C2525CB266675D400136372 /* WeavKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2525C5266675C300136372 /* WeavKit.xcframework */; };
+		3C2525CC266675D400136372 /* WeavKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2525C5266675C300136372 /* WeavKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C2525CF2666762500136372 /* WeavRunningSessionConfig+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2525CE2666762500136372 /* WeavRunningSessionConfig+Extension.swift */; };
+		3C2525D12666767200136372 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2525D02666767200136372 /* Constants.swift */; };
+		3C2525D3266678BA00136372 /* WeavExampleEmbeddedSongs.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C2525D2266678BA00136372 /* WeavExampleEmbeddedSongs.bundle */; };
 		3C6A17641DF7087C006CD716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A17631DF7087C006CD716 /* AppDelegate.swift */; };
 		3C6A17681DF7087C006CD716 /* RunSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A17671DF7087C006CD716 /* RunSetupViewController.swift */; };
 		3C6A176B1DF7087C006CD716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6A17691DF7087C006CD716 /* Main.storyboard */; };
 		3C6A176D1DF7087C006CD716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C6A176C1DF7087C006CD716 /* Assets.xcassets */; };
 		3C6A17701DF7087C006CD716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6A176E1DF7087C006CD716 /* LaunchScreen.storyboard */; };
 		3C6A17811DF71180006CD716 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A17801DF71180006CD716 /* PlayerViewController.swift */; };
-		3CA859DE1E2FF11B00B870C8 /* WeavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA859DD1E2FF11B00B870C8 /* WeavViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3C035FB21ECF8E220093EDC3 /* WeavKit.framework in Embed Frameworks */,
+				3C2525CC266675D400136372 /* WeavKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,7 +38,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3C035FB01ECF8E220093EDC3 /* WeavKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WeavKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2525C3266675C300136372 /* kelly_roberts_400m_repeats.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = kelly_roberts_400m_repeats.bundle; sourceTree = "<group>"; };
+		3C2525C4266675C300136372 /* kelly_roberts_400m_repeats.enc */ = {isa = PBXFileReference; lastKnownFileType = file; path = kelly_roberts_400m_repeats.enc; sourceTree = "<group>"; };
+		3C2525C5266675C300136372 /* WeavKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = WeavKit.xcframework; sourceTree = "<group>"; };
+		3C2525C6266675C300136372 /* kelly_roberts_instructor_embedded.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = kelly_roberts_instructor_embedded.bundle; sourceTree = "<group>"; };
+		3C2525CE2666762500136372 /* WeavRunningSessionConfig+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeavRunningSessionConfig+Extension.swift"; sourceTree = "<group>"; };
+		3C2525D02666767200136372 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3C2525D2266678BA00136372 /* WeavExampleEmbeddedSongs.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeavExampleEmbeddedSongs.bundle; sourceTree = "<group>"; };
 		3C6A17601DF7087C006CD716 /* WeavExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeavExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6A17631DF7087C006CD716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C6A17671DF7087C006CD716 /* RunSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunSetupViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +53,6 @@
 		3C6A176F1DF7087C006CD716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C6A17711DF7087C006CD716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C6A17801DF71180006CD716 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
-		3CA859DD1E2FF11B00B870C8 /* WeavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeavViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,17 +60,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C035FB11ECF8E220093EDC3 /* WeavKit.framework in Frameworks */,
+				3C2525CB266675D400136372 /* WeavKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C2525C2266674AB00136372 /* sdk-resources */ = {
+			isa = PBXGroup;
+			children = (
+				3C2525D2266678BA00136372 /* WeavExampleEmbeddedSongs.bundle */,
+				3C2525C3266675C300136372 /* kelly_roberts_400m_repeats.bundle */,
+				3C2525C4266675C300136372 /* kelly_roberts_400m_repeats.enc */,
+				3C2525C6266675C300136372 /* kelly_roberts_instructor_embedded.bundle */,
+				3C2525C5266675C300136372 /* WeavKit.xcframework */,
+			);
+			path = "sdk-resources";
+			sourceTree = "<group>";
+		};
+		3C2525CD2666761900136372 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C2525CE2666762500136372 /* WeavRunningSessionConfig+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3C6A17571DF7087C006CD716 = {
 			isa = PBXGroup;
 			children = (
-				3C035FB01ECF8E220093EDC3 /* WeavKit.framework */,
 				3C6A17621DF7087C006CD716 /* WeavExample */,
 				3C6A17611DF7087C006CD716 /* Products */,
 			);
@@ -77,6 +106,8 @@
 		3C6A17621DF7087C006CD716 /* WeavExample */ = {
 			isa = PBXGroup;
 			children = (
+				3C2525CD2666761900136372 /* Extensions */,
+				3C2525C2266674AB00136372 /* sdk-resources */,
 				3C6A17631DF7087C006CD716 /* AppDelegate.swift */,
 				3C6A17671DF7087C006CD716 /* RunSetupViewController.swift */,
 				3C6A17691DF7087C006CD716 /* Main.storyboard */,
@@ -84,7 +115,7 @@
 				3C6A176E1DF7087C006CD716 /* LaunchScreen.storyboard */,
 				3C6A17711DF7087C006CD716 /* Info.plist */,
 				3C6A17801DF71180006CD716 /* PlayerViewController.swift */,
-				3CA859DD1E2FF11B00B870C8 /* WeavViewController.swift */,
+				3C2525D02666767200136372 /* Constants.swift */,
 			);
 			path = WeavExample;
 			sourceTree = "<group>";
@@ -137,6 +168,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -155,9 +187,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2525CA266675C300136372 /* kelly_roberts_instructor_embedded.bundle in Resources */,
+				3C2525D3266678BA00136372 /* WeavExampleEmbeddedSongs.bundle in Resources */,
 				3C6A17701DF7087C006CD716 /* LaunchScreen.storyboard in Resources */,
 				3C6A176D1DF7087C006CD716 /* Assets.xcassets in Resources */,
 				3C6A176B1DF7087C006CD716 /* Main.storyboard in Resources */,
+				3C2525C7266675C300136372 /* kelly_roberts_400m_repeats.bundle in Resources */,
+				3C2525C8266675C300136372 /* kelly_roberts_400m_repeats.enc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,8 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2525D12666767200136372 /* Constants.swift in Sources */,
 				3C6A17681DF7087C006CD716 /* RunSetupViewController.swift in Sources */,
-				3CA859DE1E2FF11B00B870C8 /* WeavViewController.swift in Sources */,
+				3C2525CF2666762500136372 /* WeavRunningSessionConfig+Extension.swift in Sources */,
 				3C6A17641DF7087C006CD716 /* AppDelegate.swift in Sources */,
 				3C6A17811DF71180006CD716 /* PlayerViewController.swift in Sources */,
 			);
@@ -283,7 +320,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -299,10 +337,14 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = WeavExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.weav.apps.WeavExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -317,10 +359,14 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = WeavExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.weav.apps.WeavExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

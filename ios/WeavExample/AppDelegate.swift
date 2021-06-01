@@ -15,13 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
-    WeavKit.setup()
-    
-    
-    // It is upto the host app to enable and disable subscription status on Weav Kit based on user's ability to access premium content
+    WeavKit.setup(withLicenseKey: "weav-example-license-key")
+    WeavKit.setupMusic()
+    WeavKit.setUserIdentifier("unique-user-id")
+
+    if let url = Bundle.main.url(forResource: "WeavExampleEmbeddedSongs", withExtension: "bundle") {
+      WeavKit.loadLocalContent(fromPath: url)
+    }
+
+    // It is upto the host app to enable and disable subscription status
+    // Currently, this must be set to true to allow continuous music playback
     WeavKit.setHasSubscription(true)
     
     return true

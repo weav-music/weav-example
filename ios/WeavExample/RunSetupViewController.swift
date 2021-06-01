@@ -16,8 +16,8 @@ class RunSetupViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    
-    optInDebug.setOn(UserDefaults.standard.bool(forKey: WeavKitDataSharingPermissionKey), animated: true)
+
+    optInDebug.setOn(UserDefaults.standard.bool(forKey: WeavKit.dataSharingPermissionKey()), animated: true)
   }
 
   override func didReceiveMemoryWarning() {
@@ -26,7 +26,7 @@ class RunSetupViewController: UIViewController {
   }
 
   @IBAction func onDataSharingPreferenceChange(_ sender: Any) {
-    UserDefaults.standard.set(optInDebug.isOn, forKey: WeavKitDataSharingPermissionKey)
+    UserDefaults.standard.set(optInDebug.isOn, forKey: WeavKit.dataSharingPermissionKey())
     UserDefaults.standard.synchronize()
   }
 

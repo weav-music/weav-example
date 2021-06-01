@@ -21,15 +21,18 @@ class PlayerViewController:UIViewController {
   @IBOutlet weak var timerLabel: UILabel!
   @IBOutlet weak var bpmLabel: UILabel!
   
-  let session = WeavKit.sessionManager().activateRunningSession()
-  var runningControls:WeavRunCadenceModeControl!
+  let session = WeavKit.sessionManager().activateRunningWithMusicSession(with: WeavRunningSessionConfig.createDefault())
+  var runningControls: WeavRunCadenceModeControl!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    session.add(self)
+    session.addMusicSessionDelegate(self)
+    session.addRunningSessionDelegate(self)
     
-    runningControls = session.startCadenceMode(withInitialCadence: 120)
+    runningControls = session.startCadenceMode(withInitialCadence: 120,
+                                               cadenceLock: false)
+    pauseButton.isHidden = true
   }
   
   @IBAction func onPreviousTrack(_ sender: Any) {
@@ -43,37 +46,55 @@ class PlayerViewController:UIViewController {
   @IBAction func onPlayPauseToggle(_ sender: Any) {
     if (session.isWorkoutInProgress){
       session.pauseWorkout()
-//      runningSession.pauseMusic()
+      session.pauseMusic()
     } else {
-      session.resumeWorkout()
-//      runningSession.resumeMusic()
+      session.startWorkout()
+      session.resumeMusic()
     }
   }
   
   @IBAction func onDoneSession(_ sender: Any) {
     session.stop()
+    session.terminate()
     dismiss(animated: true)
   }
 }
 
-extension PlayerViewController: WeavRunningSessionDelegate {
+extension PlayerViewController: WeavMusicSessionDelegate {
+  func nowPlaying(_ song: WeavSong, in playlist: WeavPlaylist) {
+    do {
+      try self.coverArtImage.image = UIImage(data: Data(contentsOf: song.coverArtImageUrl))
+    } catch _ {}
+    trackName.text = song.name
+    artistName.text = song.artist
+  }
 
   func playerBpmChanged(_ bpm: Double) {
     bpmLabel.text = String(format:"%.f bpm", bpm)
   }
-  
-  func workoutStateChanged(_ isRunning: Bool) {
-    session.duckAudio(isRunning ? 1.0 : 0.2) // its nice to reduce the volume when workout is paused
-    pauseButton.isHidden = !isRunning
-    playButton.isHidden = isRunning
+
+  func playerStateChanged(_ isPlaying: Bool) {
+
+  }
+
+  func nowPlayingSongProgress(_ elapsed: TimeInterval, total: TimeInterval) {
+
+  }
+}
+
+extension PlayerViewController: WeavRunningSessionDelegate {
+  func cadenceUpdated(_ cadence: Double) {
+
+  }
+
+  func splitPaceUpdated(_ mps: Double) {
+
   }
   
-  func nowPlayingTitle(_ title: String, artist: String, coverArtUrl: URL) {
-    do {
-      try self.coverArtImage.image = UIImage(data: Data(contentsOf: coverArtUrl))
-    } catch _ {}
-    trackName.text = title
-    artistName.text = artist
+  func workoutStateChanged(_ isRunning: Bool) {
+    session.duckMusic(isRunning ? 1.0 : 0.2)
+    pauseButton.isHidden = !isRunning
+    playButton.isHidden = isRunning
   }
   
   func timerTicked(_ timeElapsed: TimeInterval) {
