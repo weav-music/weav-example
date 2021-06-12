@@ -20,8 +20,14 @@
 		3C6A176B1DF7087C006CD716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6A17691DF7087C006CD716 /* Main.storyboard */; };
 		3C6A176D1DF7087C006CD716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C6A176C1DF7087C006CD716 /* Assets.xcassets */; };
 		3C6A17701DF7087C006CD716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6A176E1DF7087C006CD716 /* LaunchScreen.storyboard */; };
-		3C6A17811DF71180006CD716 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A17801DF71180006CD716 /* PlayerViewController.swift */; };
+		3C6A17811DF71180006CD716 /* RunningPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A17801DF71180006CD716 /* RunningPlayerViewController.swift */; };
+		3C88991C26739CAF004A5FE7 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C88991B26739CAF004A5FE7 /* UIImage.swift */; };
+		3C88991F26739FB4004A5FE7 /* MusicControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C88991E26739FB4004A5FE7 /* MusicControlsView.swift */; };
+		3C8899212673A028004A5FE7 /* RunningPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8899202673A028004A5FE7 /* RunningPlayerView.swift */; };
+		3C8899242673B653004A5FE7 /* LocationPermissionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8899232673B653004A5FE7 /* LocationPermissionRequest.swift */; };
 		3CA358162667BA81001B1637 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3CA358152667BA81001B1637 /* SnapKit */; };
+		3CA358192667BE05001B1637 /* RunningControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA358182667BE05001B1637 /* RunningControlsView.swift */; };
+		3CA3581B2667BE40001B1637 /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3581A2667BE40001B1637 /* StatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,7 +59,13 @@
 		3C6A176C1DF7087C006CD716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C6A176F1DF7087C006CD716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C6A17711DF7087C006CD716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C6A17801DF71180006CD716 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		3C6A17801DF71180006CD716 /* RunningPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningPlayerViewController.swift; sourceTree = "<group>"; };
+		3C88991B26739CAF004A5FE7 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		3C88991E26739FB4004A5FE7 /* MusicControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicControlsView.swift; sourceTree = "<group>"; };
+		3C8899202673A028004A5FE7 /* RunningPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningPlayerView.swift; sourceTree = "<group>"; };
+		3C8899232673B653004A5FE7 /* LocationPermissionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionRequest.swift; sourceTree = "<group>"; };
+		3CA358182667BE05001B1637 /* RunningControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningControlsView.swift; sourceTree = "<group>"; };
+		3CA3581A2667BE40001B1637 /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				3C2525CE2666762500136372 /* WeavRunningSessionConfig+Extension.swift */,
+				3C88991B26739CAF004A5FE7 /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -108,6 +121,9 @@
 		3C6A17621DF7087C006CD716 /* WeavExample */ = {
 			isa = PBXGroup;
 			children = (
+				3C8899222673B646004A5FE7 /* Utils */,
+				3C88991D26739FA9004A5FE7 /* MusicPlayer */,
+				3CA358172667BDE0001B1637 /* RunningPlayer */,
 				3C2525CD2666761900136372 /* Extensions */,
 				3C2525C2266674AB00136372 /* sdk-resources */,
 				3C6A17631DF7087C006CD716 /* AppDelegate.swift */,
@@ -116,10 +132,36 @@
 				3C6A176C1DF7087C006CD716 /* Assets.xcassets */,
 				3C6A176E1DF7087C006CD716 /* LaunchScreen.storyboard */,
 				3C6A17711DF7087C006CD716 /* Info.plist */,
-				3C6A17801DF71180006CD716 /* PlayerViewController.swift */,
 				3C2525D02666767200136372 /* Constants.swift */,
 			);
 			path = WeavExample;
+			sourceTree = "<group>";
+		};
+		3C88991D26739FA9004A5FE7 /* MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3C88991E26739FB4004A5FE7 /* MusicControlsView.swift */,
+			);
+			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		3C8899222673B646004A5FE7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3C8899232673B653004A5FE7 /* LocationPermissionRequest.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3CA358172667BDE0001B1637 /* RunningPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3CA358182667BE05001B1637 /* RunningControlsView.swift */,
+				3CA3581A2667BE40001B1637 /* StatView.swift */,
+				3C8899202673A028004A5FE7 /* RunningPlayerView.swift */,
+				3C6A17801DF71180006CD716 /* RunningPlayerViewController.swift */,
+			);
+			path = RunningPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,11 +254,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CA3581B2667BE40001B1637 /* StatView.swift in Sources */,
+				3C88991C26739CAF004A5FE7 /* UIImage.swift in Sources */,
+				3C8899242673B653004A5FE7 /* LocationPermissionRequest.swift in Sources */,
 				3C2525D12666767200136372 /* Constants.swift in Sources */,
 				3C6A17681DF7087C006CD716 /* RunSetupViewController.swift in Sources */,
 				3C2525CF2666762500136372 /* WeavRunningSessionConfig+Extension.swift in Sources */,
 				3C6A17641DF7087C006CD716 /* AppDelegate.swift in Sources */,
-				3C6A17811DF71180006CD716 /* PlayerViewController.swift in Sources */,
+				3C88991F26739FB4004A5FE7 /* MusicControlsView.swift in Sources */,
+				3CA358192667BE05001B1637 /* RunningControlsView.swift in Sources */,
+				3C6A17811DF71180006CD716 /* RunningPlayerViewController.swift in Sources */,
+				3C8899212673A028004A5FE7 /* RunningPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
