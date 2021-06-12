@@ -34,12 +34,12 @@ class RunningPlayerViewController: UIViewController {
   }
 
   override func loadView() {
-    view = RunningPlayerView()
+    view = RunningPlayerView(hasMusicControls: musicSession != nil)
 
-    myView.musicPlayerView.setPlayerControls(self,
-                                             onNextSong: #selector(onNextSong),
-                                             onPreviousSong: #selector(onPreviousSong),
-                                             onPlayerToggle: #selector(onPlayerToggle))
+    myView.musicPlayerView?.setPlayerControls(self,
+                                              onNextSong: #selector(onNextSong),
+                                              onPreviousSong: #selector(onPreviousSong),
+                                              onPlayerToggle: #selector(onPlayerToggle))
     myView.statsView.onWorkoutStateToggle(self, #selector(onWorkoutStateToggle))
   }
 
@@ -96,7 +96,7 @@ class RunningPlayerViewController: UIViewController {
 
 extension RunningPlayerViewController: WeavMusicSessionDelegate {
   func nowPlaying(_ song: WeavSong, in playlist: WeavPlaylist) {
-    myView.musicPlayerView.songChanged(song)
+    myView.musicPlayerView?.songChanged(song)
   }
 
   func playerBpmChanged(_ bpm: Double) {
@@ -104,11 +104,11 @@ extension RunningPlayerViewController: WeavMusicSessionDelegate {
   }
 
   func playerStateChanged(_ isPlaying: Bool) {
-    myView.musicPlayerView.setIsPlaying(isPlaying)
+    myView.musicPlayerView?.setIsPlaying(isPlaying)
   }
 
   func nowPlayingSongProgress(_ elapsed: TimeInterval, total: TimeInterval) {
-    myView.musicPlayerView.songProgress(elapsed / total)
+    myView.musicPlayerView?.songProgress(elapsed / total)
   }
 }
 

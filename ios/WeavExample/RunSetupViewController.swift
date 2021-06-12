@@ -29,7 +29,7 @@ class RunSetupViewController: UIViewController {
   @IBAction func onStartRun(_ sender: Any) {
     let config = WeavRunningSessionConfig.createDefault()
     setLocationSource(config) { [weak self] in
-      let session = WeavKit.sessionManager().activateRunningWithMusicSession(with: config)
+      let session = WeavKit.sessionManager().activateRunningSession(with: config)
       let controls = session.startCadenceMode(withInitialCadence: 120, cadenceLock: false)
       self?.showPlayerViewController(session: session, controls: controls)
     }

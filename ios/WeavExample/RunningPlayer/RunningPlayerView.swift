@@ -11,10 +11,11 @@ import SnapKit
 import UIKit
 
 class RunningPlayerView: UIView {
-  let musicPlayerView = MusicControlsView()
+  let musicPlayerView: MusicControlsView?
   let statsView = RunningControlsView()
 
-  init() {
+  init(hasMusicControls: Bool) {
+    musicPlayerView = hasMusicControls ? MusicControlsView() : nil
     super.init(frame: .zero)
     setup()
   }
@@ -25,19 +26,21 @@ class RunningPlayerView: UIView {
 
   private func setup() {
     addSubview(statsView)
-    addSubview(musicPlayerView)
 
     backgroundColor = .white
 
-    musicPlayerView.snp.makeConstraints { make in
+    let musicControlsLayoutGuide = musicPlayerView ?? UIView()
+    addSubview(musicControlsLayoutGuide)
+
+    musicControlsLayoutGuide.snp.makeConstraints { make in
       make.left.right.equalToSuperview().inset(16)
       make.bottom.equalToSuperview().inset(32)
       make.height.equalToSuperview().dividedBy(4)
     }
 
     statsView.snp.makeConstraints { make in
-      make.left.right.height.equalTo(musicPlayerView)
-      make.bottom.equalTo(musicPlayerView.snp.top)
+      make.left.right.height.equalTo(musicControlsLayoutGuide)
+      make.bottom.equalTo(musicControlsLayoutGuide.snp.top)
     }
   }
 }
