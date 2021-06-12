@@ -11,25 +11,22 @@ import WeavKit
 
 class RunSetupViewController: UIViewController {
 
-  @IBOutlet weak var optInDebug: UISwitch!
-
   private let locationPermissionRequest = LocationPermissionRequest()
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
 
-    optInDebug.setOn(UserDefaults.standard.bool(forKey: WeavKit.dataSharingPermissionKey()), animated: true)
-  }
-
-  @IBAction func onDataSharingPreferenceChange(_ sender: Any) {
-    UserDefaults.standard.set(optInDebug.isOn, forKey: WeavKit.dataSharingPermissionKey())
-    UserDefaults.standard.synchronize()
-  }
-
-  @IBAction func onStartRun(_ sender: Any) {
+  @IBAction func onStartRunWithMusic(_ sender: Any) {
     let config = WeavRunningSessionConfig.createDefault()
+    let session = WeavKit.sessionManager().activateRunningWithMusicSession(with: config)
+    startCadenceMode(session: session, config: config)
+  }
+
+  @IBAction func onStartRunWithoutMusic(_ sender: Any) {
+    let config = WeavRunningSessionConfig.createDefault()
+    let session = WeavKit.sessionManager().activateRunningSession(with: config)
+    startCadenceMode(session: session, config: config)
+  }
+
+  private func startCadenceMode(session: WeavRunningSession, config: WeavRunningSessionConfig) {
     setLocationSource(config) { [weak self] in
-      let session = WeavKit.sessionManager().activateRunningSession(with: config)
       let controls = session.startCadenceMode(withInitialCadence: 120, cadenceLock: false)
       self?.showPlayerViewController(session: session, controls: controls)
     }

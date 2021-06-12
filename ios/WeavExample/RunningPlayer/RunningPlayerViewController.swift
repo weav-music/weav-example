@@ -80,6 +80,7 @@ class RunningPlayerViewController: UIViewController {
     if runningSession.isWorkoutInProgress {
       runningSession.pauseWorkout()
     } else {
+      // Starting or resuming workout in a WeavRunningWithMusicSession will *always* resume music.
       runningSession.startWorkout()
       runningSession.resumeWorkout()
     }
@@ -127,7 +128,13 @@ extension RunningPlayerViewController: WeavRunningSessionDelegate {
   }
   
   func workoutStateChanged(_ isRunning: Bool) {
-    musicSession?.duckMusic(isRunning ? 1.0 : 0.4)
+//    To attach music state to workout state,
+//    this is where you must call pause or resume music accordingly.
+//    if isRunning {
+//      musicSession?.resumeMusic()
+//    } else {
+//      musicSession?.pauseMusic()
+//    }
     myView.statsView.workoutStateChanged(isRunning)
   }
   
