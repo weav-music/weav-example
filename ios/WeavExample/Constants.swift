@@ -19,8 +19,13 @@ struct Constants {
 
   static let exampleWorkout: WorkoutResourceBundle = {
     let identifier = "kelly_roberts_400m_repeats"
-    let url = Bundle.main.url(forResource: identifier, withExtension: "bundle")!
+    let url = Bundle.main.url(forResource: identifier, withExtension: "enc")!
     return (identifier: identifier, path: url.path)
+  }()
+
+  static let exampleWorkoutBundle: WorkoutResourceBundle = {
+    let url = Bundle.main.url(forResource: Constants.exampleWorkout.identifier, withExtension: "bundle")!
+    return (identifier: Constants.exampleWorkout.identifier, path: url.path)
   }()
 
   static let examplePlaylistId = "io.weav.bundle.WeavExample"

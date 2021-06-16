@@ -17,16 +17,22 @@ class RunningPlayerViewController: UIViewController {
   private var musicSession: WeavRunningWithMusicSession? {
     return runningSession as? WeavRunningWithMusicSession
   }
-  private let controls: WeavRunModeControl
+  private var controls: WeavRunModeControl!
 
-  private var myView: RunningPlayerView {
-    return view as! RunningPlayerView
-  }
+  private let myView: RunningPlayerView
 
-  init(session: WeavRunningSession, cadenceControls: WeavRunModeControl) {
+  init(session: WeavRunningSession, workoutPlan: WeavWorkoutPlan?) {
     self.runningSession = session
-    self.controls = cadenceControls
+    self.myView = RunningPlayerView(hasWorkoutPlan: workoutPlan != nil,
+                                    hasMusicControls: (runningSession as? WeavRunningWithMusicSession) != nil)
     super.init(nibName: nil, bundle: nil)
+    if let workoutPlan = workoutPlan {
+      controls = session.activateWorkoutPlanMode(with: workoutPlan,
+                                                 resourceBundlePath: Constants.exampleWorkoutBundle.path,
+                                                 delegate: self)
+    } else {
+      controls = session.activateCadenceMode(withInitialCadence: 120.0, cadenceLock: false)
+    }
   }
 
   required init?(coder: NSCoder) {
@@ -34,7 +40,7 @@ class RunningPlayerViewController: UIViewController {
   }
 
   override func loadView() {
-    view = RunningPlayerView(hasMusicControls: musicSession != nil)
+    view = myView
 
     myView.musicPlayerView?.setPlayerControls(self,
                                               onNextSong: #selector(onNextSong),
@@ -77,12 +83,13 @@ class RunningPlayerViewController: UIViewController {
 
   @objc
   private func onWorkoutStateToggle() {
-    if runningSession.isWorkoutInProgress {
+    if runningSession.isWorkoutRunning {
       runningSession.pauseWorkout()
-    } else {
+    } else if runningSession.hasWorkoutStarted {
       // Starting or resuming workout in a WeavRunningWithMusicSession will *always* resume music.
-      runningSession.startWorkout()
       runningSession.resumeWorkout()
+    } else {
+      runningSession.startWorkout()
     }
   }
   
@@ -139,18 +146,32 @@ extension RunningPlayerViewController: WeavRunningSessionDelegate {
   }
   
   func timerTicked(_ timeElapsed: TimeInterval) {
-    myView.statsView.duration.text = Self.formatTime(seconds: timeElapsed)
+    myView.statsView.duration.text = TimeUtils.formatTime(seconds: timeElapsed)
   }
-  
-  static func formatTime(seconds: TimeInterval) -> String {
-    guard !seconds.isNaN else { return "-:--:--" }
-    
-    let timeInterval = Int(round(seconds))
-    
-    let seconds = timeInterval % 60
-    let minutes = (timeInterval / 60) % 60
-    let hours = (timeInterval / 3600)
-    
-    return String(format: "%d:%0.2d:%0.2d", hours, minutes, seconds)
+}
+
+extension RunningPlayerViewController: WeavRunWorkoutModeControlDelegate {
+  func workoutExecutorWorkoutPlanCompleted() {
+    myView.workoutStateView?.setTitle("Done")
+    myView.workoutStateView?.setLengthRemainig("")
+    // at this point, workout plan is complete, the controls now behave same as cadence mode
+    print("Workout plan completed - switching to cadence mode")
+  }
+
+  func workoutExecutorIntervalLengthRemaining(_ lengthRemaining: WeavWorkoutIntervalLength) {
+    myView.workoutStateView?.setLengthRemainig(lengthRemaining.displayString)
+  }
+
+  func workoutExecutorScoreCardRowAdded(for info: WeavWorkoutScoreCardInfo,
+                                        scoreRow: WeavWorkoutScoreCardRow) {
+
+  }
+
+  func workoutExecutorIntervalChanged(from fromInterval: WeavWorkoutInterval?,
+                                      withStats results: WeavWorkoutIntervalResults?,
+                                      to toInterval: WeavWorkoutInterval?) {
+    if let toInterval = toInterval {
+      myView.workoutStateView?.setTitle(toInterval.title)
+    }
   }
 }

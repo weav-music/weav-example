@@ -11,10 +11,12 @@ import SnapKit
 import UIKit
 
 class RunningPlayerView: UIView {
+  let workoutStateView: WorkoutStateView?
   let musicPlayerView: MusicControlsView?
   let statsView = RunningControlsView()
 
-  init(hasMusicControls: Bool) {
+  init(hasWorkoutPlan: Bool, hasMusicControls: Bool) {
+    workoutStateView = hasWorkoutPlan ? WorkoutStateView() : nil
     musicPlayerView = hasMusicControls ? MusicControlsView() : nil
     super.init(frame: .zero)
     setup()
@@ -28,6 +30,15 @@ class RunningPlayerView: UIView {
     addSubview(statsView)
 
     backgroundColor = .white
+
+    let workoutStateLayoutGuide = workoutStateView ?? UIView()
+    addSubview(workoutStateLayoutGuide)
+
+    workoutStateLayoutGuide.snp.makeConstraints {
+      $0.top.equalTo(safeAreaLayoutGuide.snp.top)
+      $0.left.right.equalToSuperview()
+      $0.bottom.equalTo(statsView.snp.top)
+    }
 
     let musicControlsLayoutGuide = musicPlayerView ?? UIView()
     addSubview(musicControlsLayoutGuide)

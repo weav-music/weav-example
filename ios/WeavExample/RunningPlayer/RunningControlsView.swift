@@ -37,7 +37,7 @@ class RunningControlsView: UIView {
   }
 
   private func setup() {
-    let titleLabel = UILabel()
+    let titleLabel = UILabel.createTitleLabel("Running Controls")
 
     addSubview(titleLabel)
     addSubview(pauseResumeButton)
@@ -49,10 +49,6 @@ class RunningControlsView: UIView {
     container.addSubview(distance)
     container.addSubview(pace)
 
-    titleLabel.text = "Running Controls"
-    titleLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-    titleLabel.textColor = .black
-    titleLabel.textAlignment = .center
     titleLabel.snp.makeConstraints {
       $0.bottom.equalTo(container.snp.top)
       $0.top.left.right.equalToSuperview()

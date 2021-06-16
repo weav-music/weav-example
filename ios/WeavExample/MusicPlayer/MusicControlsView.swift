@@ -45,11 +45,7 @@ class MusicControlsView: UIView {
   }
 
   func songChanged(_ song:  WeavSong) {
-    DispatchQueue.main.async { [weak self] in
-      if let image = try? UIImage(data: Data(contentsOf: song.coverArtImageUrl)) {
-        self?.coverArtImage.image = image
-      }
-    }
+    coverArtImage.asyncSetImage(fromUrl: song.coverArtImageUrl)
     songTitleLabel.text = song.name
     artistLabel.text = song.artist
   }
@@ -61,7 +57,7 @@ class MusicControlsView: UIView {
   private func setup() {
     clipsToBounds = true
 
-    let titleLabel = UILabel()
+    let titleLabel = UILabel.createTitleLabel("Music Controls")
 
     addSubview(titleLabel)
     addSubview(coverArtImage)
@@ -72,12 +68,6 @@ class MusicControlsView: UIView {
     addSubview(nextSongButton)
     addSubview(prevSongButton)
 
-    titleLabel.text = "Music Controls"
-    titleLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-    titleLabel.textColor = .black
-    titleLabel.textAlignment = .center
-    titleLabel.numberOfLines = 1
-    titleLabel.sizeToFit()
     titleLabel.snp.makeConstraints {
       $0.top.left.right.equalToSuperview()
       $0.height.equalTo(titleLabel.bounds.height)

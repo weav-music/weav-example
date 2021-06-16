@@ -50,39 +50,7 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOp-RC-6xA">
-                                <rect key="frame" x="75.5" y="435" width="224" height="41"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="Start run with music"/>
-                                <connections>
-                                    <action selector="onStartRunWithMusic:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="4ff-if-FLP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBS-b7-U1r">
-                                <rect key="frame" x="57" y="513" width="261" height="41"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="Start run without music"/>
-                                <connections>
-                                    <action selector="onStartRunWithoutMusic:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="O0S-o0-4tF"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1W9-4u-FkC">
-                                <rect key="frame" x="179.5" y="484" width="16" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="1W9-4u-FkC" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="7uo-W7-ibQ"/>
-                            <constraint firstItem="1W9-4u-FkC" firstAttribute="top" secondItem="jOp-RC-6xA" secondAttribute="bottom" constant="8" id="8st-4A-Dix"/>
-                            <constraint firstItem="bBS-b7-U1r" firstAttribute="top" secondItem="1W9-4u-FkC" secondAttribute="bottom" constant="8" id="IPH-wX-JeO"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="bBS-b7-U1r" secondAttribute="bottom" constant="64" id="Kz2-Kw-W5c"/>
-                            <constraint firstItem="bBS-b7-U1r" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="ZO6-HB-EQh"/>
-                            <constraint firstItem="jOp-RC-6xA" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="nQN-xR-wjH"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Run" image="play" id="cPa-gy-q4n"/>
                 </viewController>

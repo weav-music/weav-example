@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1BEBA5267A865600AF52E9 /* WorkoutStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BEBA4267A865600AF52E9 /* WorkoutStateView.swift */; };
+		3C1BEBA7267A87D900AF52E9 /* WeavWorkoutIntervalLength+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BEBA6267A87D900AF52E9 /* WeavWorkoutIntervalLength+Extension.swift */; };
 		3C2525C7266675C300136372 /* kelly_roberts_400m_repeats.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C2525C3266675C300136372 /* kelly_roberts_400m_repeats.bundle */; };
 		3C2525C8266675C300136372 /* kelly_roberts_400m_repeats.enc in Resources */ = {isa = PBXBuildFile; fileRef = 3C2525C4266675C300136372 /* kelly_roberts_400m_repeats.enc */; };
 		3C2525CA266675C300136372 /* kelly_roberts_instructor_embedded.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C2525C6266675C300136372 /* kelly_roberts_instructor_embedded.bundle */; };
@@ -21,10 +23,16 @@
 		3C6A176D1DF7087C006CD716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C6A176C1DF7087C006CD716 /* Assets.xcassets */; };
 		3C6A17701DF7087C006CD716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6A176E1DF7087C006CD716 /* LaunchScreen.storyboard */; };
 		3C6A17811DF71180006CD716 /* RunningPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A17801DF71180006CD716 /* RunningPlayerViewController.swift */; };
-		3C88991C26739CAF004A5FE7 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C88991B26739CAF004A5FE7 /* UIImage.swift */; };
+		3C88991C26739CAF004A5FE7 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C88991B26739CAF004A5FE7 /* UIImage+Extension.swift */; };
 		3C88991F26739FB4004A5FE7 /* MusicControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C88991E26739FB4004A5FE7 /* MusicControlsView.swift */; };
 		3C8899212673A028004A5FE7 /* RunningPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8899202673A028004A5FE7 /* RunningPlayerView.swift */; };
 		3C8899242673B653004A5FE7 /* LocationPermissionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8899232673B653004A5FE7 /* LocationPermissionRequest.swift */; };
+		3C8899282675153C004A5FE7 /* WorkoutPlanExecutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8899272675153C004A5FE7 /* WorkoutPlanExecutorViewController.swift */; };
+		3C88992C26751597004A5FE7 /* WorkoutPlanDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C88992B26751597004A5FE7 /* WorkoutPlanDetailsView.swift */; };
+		3C88992E267641C3004A5FE7 /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C88992D267641C3004A5FE7 /* TimeUtils.swift */; };
+		3C8899302676421F004A5FE7 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C88992F2676421F004A5FE7 /* UIImageView+Extension.swift */; };
+		3C889933267643E4004A5FE7 /* RunSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C889932267643E4004A5FE7 /* RunSetupView.swift */; };
+		3C8899352676456C004A5FE7 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8899342676456C004A5FE7 /* UILabel+Extension.swift */; };
 		3CA358162667BA81001B1637 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3CA358152667BA81001B1637 /* SnapKit */; };
 		3CA358192667BE05001B1637 /* RunningControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA358182667BE05001B1637 /* RunningControlsView.swift */; };
 		3CA3581B2667BE40001B1637 /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3581A2667BE40001B1637 /* StatView.swift */; };
@@ -45,6 +53,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C1BEBA4267A865600AF52E9 /* WorkoutStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStateView.swift; sourceTree = "<group>"; };
+		3C1BEBA6267A87D900AF52E9 /* WeavWorkoutIntervalLength+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeavWorkoutIntervalLength+Extension.swift"; sourceTree = "<group>"; };
 		3C2525C3266675C300136372 /* kelly_roberts_400m_repeats.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = kelly_roberts_400m_repeats.bundle; sourceTree = "<group>"; };
 		3C2525C4266675C300136372 /* kelly_roberts_400m_repeats.enc */ = {isa = PBXFileReference; lastKnownFileType = file; path = kelly_roberts_400m_repeats.enc; sourceTree = "<group>"; };
 		3C2525C5266675C300136372 /* WeavKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = WeavKit.xcframework; sourceTree = "<group>"; };
@@ -60,10 +70,16 @@
 		3C6A176F1DF7087C006CD716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C6A17711DF7087C006CD716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C6A17801DF71180006CD716 /* RunningPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningPlayerViewController.swift; sourceTree = "<group>"; };
-		3C88991B26739CAF004A5FE7 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		3C88991B26739CAF004A5FE7 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		3C88991E26739FB4004A5FE7 /* MusicControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicControlsView.swift; sourceTree = "<group>"; };
 		3C8899202673A028004A5FE7 /* RunningPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningPlayerView.swift; sourceTree = "<group>"; };
 		3C8899232673B653004A5FE7 /* LocationPermissionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionRequest.swift; sourceTree = "<group>"; };
+		3C8899272675153C004A5FE7 /* WorkoutPlanExecutorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanExecutorViewController.swift; sourceTree = "<group>"; };
+		3C88992B26751597004A5FE7 /* WorkoutPlanDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPlanDetailsView.swift; sourceTree = "<group>"; };
+		3C88992D267641C3004A5FE7 /* TimeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
+		3C88992F2676421F004A5FE7 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		3C889932267643E4004A5FE7 /* RunSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunSetupView.swift; sourceTree = "<group>"; };
+		3C8899342676456C004A5FE7 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		3CA358182667BE05001B1637 /* RunningControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningControlsView.swift; sourceTree = "<group>"; };
 		3CA3581A2667BE40001B1637 /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				3C2525CE2666762500136372 /* WeavRunningSessionConfig+Extension.swift */,
-				3C88991B26739CAF004A5FE7 /* UIImage.swift */,
+				3C88991B26739CAF004A5FE7 /* UIImage+Extension.swift */,
+				3C88992F2676421F004A5FE7 /* UIImageView+Extension.swift */,
+				3C8899342676456C004A5FE7 /* UILabel+Extension.swift */,
+				3C1BEBA6267A87D900AF52E9 /* WeavWorkoutIntervalLength+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -121,13 +140,13 @@
 		3C6A17621DF7087C006CD716 /* WeavExample */ = {
 			isa = PBXGroup;
 			children = (
+				3C889931267643D6004A5FE7 /* RunSetup */,
 				3C8899222673B646004A5FE7 /* Utils */,
 				3C88991D26739FA9004A5FE7 /* MusicPlayer */,
 				3CA358172667BDE0001B1637 /* RunningPlayer */,
 				3C2525CD2666761900136372 /* Extensions */,
 				3C2525C2266674AB00136372 /* sdk-resources */,
 				3C6A17631DF7087C006CD716 /* AppDelegate.swift */,
-				3C6A17671DF7087C006CD716 /* RunSetupViewController.swift */,
 				3C6A17691DF7087C006CD716 /* Main.storyboard */,
 				3C6A176C1DF7087C006CD716 /* Assets.xcassets */,
 				3C6A176E1DF7087C006CD716 /* LaunchScreen.storyboard */,
@@ -149,8 +168,18 @@
 			isa = PBXGroup;
 			children = (
 				3C8899232673B653004A5FE7 /* LocationPermissionRequest.swift */,
+				3C88992D267641C3004A5FE7 /* TimeUtils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3C889931267643D6004A5FE7 /* RunSetup */ = {
+			isa = PBXGroup;
+			children = (
+				3C6A17671DF7087C006CD716 /* RunSetupViewController.swift */,
+				3C889932267643E4004A5FE7 /* RunSetupView.swift */,
+			);
+			path = RunSetup;
 			sourceTree = "<group>";
 		};
 		3CA358172667BDE0001B1637 /* RunningPlayer */ = {
@@ -160,6 +189,9 @@
 				3CA3581A2667BE40001B1637 /* StatView.swift */,
 				3C8899202673A028004A5FE7 /* RunningPlayerView.swift */,
 				3C6A17801DF71180006CD716 /* RunningPlayerViewController.swift */,
+				3C8899272675153C004A5FE7 /* WorkoutPlanExecutorViewController.swift */,
+				3C88992B26751597004A5FE7 /* WorkoutPlanDetailsView.swift */,
+				3C1BEBA4267A865600AF52E9 /* WorkoutStateView.swift */,
 			);
 			path = RunningPlayer;
 			sourceTree = "<group>";
@@ -254,16 +286,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8899352676456C004A5FE7 /* UILabel+Extension.swift in Sources */,
+				3C8899302676421F004A5FE7 /* UIImageView+Extension.swift in Sources */,
+				3C1BEBA5267A865600AF52E9 /* WorkoutStateView.swift in Sources */,
 				3CA3581B2667BE40001B1637 /* StatView.swift in Sources */,
-				3C88991C26739CAF004A5FE7 /* UIImage.swift in Sources */,
+				3C88991C26739CAF004A5FE7 /* UIImage+Extension.swift in Sources */,
+				3C88992C26751597004A5FE7 /* WorkoutPlanDetailsView.swift in Sources */,
 				3C8899242673B653004A5FE7 /* LocationPermissionRequest.swift in Sources */,
 				3C2525D12666767200136372 /* Constants.swift in Sources */,
+				3C1BEBA7267A87D900AF52E9 /* WeavWorkoutIntervalLength+Extension.swift in Sources */,
 				3C6A17681DF7087C006CD716 /* RunSetupViewController.swift in Sources */,
+				3C88992E267641C3004A5FE7 /* TimeUtils.swift in Sources */,
 				3C2525CF2666762500136372 /* WeavRunningSessionConfig+Extension.swift in Sources */,
 				3C6A17641DF7087C006CD716 /* AppDelegate.swift in Sources */,
 				3C88991F26739FB4004A5FE7 /* MusicControlsView.swift in Sources */,
 				3CA358192667BE05001B1637 /* RunningControlsView.swift in Sources */,
 				3C6A17811DF71180006CD716 /* RunningPlayerViewController.swift in Sources */,
+				3C8899282675153C004A5FE7 /* WorkoutPlanExecutorViewController.swift in Sources */,
+				3C889933267643E4004A5FE7 /* RunSetupView.swift in Sources */,
 				3C8899212673A028004A5FE7 /* RunningPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +432,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"WEAV_EXAMPLE_BUILD=1",
+					"DEBUG=1",
+				);
 				INFOPLIST_FILE = WeavExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -414,6 +458,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = "WEAV_EXAMPLE_BUILD=1";
 				INFOPLIST_FILE = WeavExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
