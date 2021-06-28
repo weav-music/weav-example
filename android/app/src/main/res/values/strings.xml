@@ -1,8 +1,7 @@
 <resources>
-    <string name="app_name">weav-example</string>
-    <string name="weav_audio_example">Weav Audio Example</string>
-    <string name="negative_bpm_ctrl">-</string>
-    <string name="positive_bpm_ctrl">+</string>
-    <string name="default_bpm_label">... bpm</string>
-    <string name="play_pause_toggle">Play/Pause</string>
+    <string name="app_name">WeavExample</string>
+    <string name="title_run">Run</string>
+    <string name="title_music">Music</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

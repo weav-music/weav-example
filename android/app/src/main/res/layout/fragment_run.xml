@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="3"
+    android:orientation="vertical"
+    tools:context=".ui.run.RunFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/instructor_image"
+            android:layout_width="250px"
+            android:layout_height="250px"
+            app:layout_constraintBottom_toTopOf="@+id/text_load_workout_plan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+        <TextView
+            android:id="@+id/text_load_workout_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Load workout plan"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:clickable="true"
+            android:textColor="@color/link_blue"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@+id/instructor_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+        <TextView
+            android:id="@+id/text_workout_plan_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Run with workout plan"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/text_start_workout_with_music"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/text_start_workout_with_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start workout plan with music"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:clickable="true"
+            android:textColor="@color/link_blue"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@+id/text_workout_plan_title"
+            app:layout_constraintBottom_toTopOf="@+id/text_start_workout_without_music"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/text_start_workout_without_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start workout plan without music"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:clickable="true"
+            android:textColor="@color/link_blue"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@+id/text_start_workout_with_music"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+
+        <TextView
+            android:id="@+id/text_no_workout_plan_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Run without workout plan"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/text_start_run_with_music"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/text_start_run_with_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start run with music"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:clickable="true"
+            android:textColor="@color/link_blue"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@+id/text_no_workout_plan_title"
+            app:layout_constraintBottom_toTopOf="@+id/text_start_run_without_music"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/text_start_run_without_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start run without music"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:clickable="true"
+            android:textColor="@color/link_blue"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@+id/text_start_run_with_music"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
+
