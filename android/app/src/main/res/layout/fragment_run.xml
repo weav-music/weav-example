@@ -43,7 +43,7 @@
             android:id="@+id/text_workout_plan_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Run without workout plan"
+            android:text="Run with workout plan"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textColor="@color/black"
@@ -55,10 +55,12 @@
             android:id="@+id/text_start_workout_with_music"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start run with music"
+            android:text="Start workout plan with music"
             android:textAlignment="center"
             android:textSize="20sp"
+            android:clickable="true"
             android:textColor="@color/link_blue"
+            android:focusable="true"
             app:layout_constraintTop_toBottomOf="@+id/text_workout_plan_title"
             app:layout_constraintBottom_toTopOf="@+id/text_start_workout_without_music"
             tools:layout_editor_absoluteX="0dp" />
@@ -67,10 +69,12 @@
             android:id="@+id/text_start_workout_without_music"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start run without music"
+            android:text="Start workout plan without music"
             android:textAlignment="center"
             android:textSize="20sp"
+            android:clickable="true"
             android:textColor="@color/link_blue"
+            android:focusable="true"
             app:layout_constraintTop_toBottomOf="@+id/text_start_workout_with_music"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:layout_editor_absoluteX="16dp" />
@@ -99,7 +103,9 @@
             android:text="Start run with music"
             android:textAlignment="center"
             android:textSize="20sp"
+            android:clickable="true"
             android:textColor="@color/link_blue"
+            android:focusable="true"
             app:layout_constraintTop_toBottomOf="@+id/text_no_workout_plan_title"
             app:layout_constraintBottom_toTopOf="@+id/text_start_run_without_music"
             tools:layout_editor_absoluteX="0dp" />
@@ -111,12 +117,12 @@
             android:text="Start run without music"
             android:textAlignment="center"
             android:textSize="20sp"
+            android:clickable="true"
             android:textColor="@color/link_blue"
+            android:focusable="true"
             app:layout_constraintTop_toBottomOf="@+id/text_start_run_with_music"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:layout_editor_absoluteX="16dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 </androidx.appcompat.widget.LinearLayoutCompat>
+
