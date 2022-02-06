@@ -26,10 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     if let url = Bundle.main.url(forResource: "WeavExampleEmbeddedSongs", withExtension: "bundle") {
       WeavKit.loadLocalContent(fromPath: url)
     }
-
-    // It is upto the host app to enable and disable subscription status
-    // Currently, this must be set to true to allow continuous music playback
-    WeavKit.setHasSubscription(true)
     
     return true
   }
